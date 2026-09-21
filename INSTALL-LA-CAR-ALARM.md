@@ -15,9 +15,12 @@ Insert a quote plugin **immediately under the existing banner**. Offers, FAQs, S
 
 ## Files
 1. Save `ams-plugin-alarm.css` as `/assets/css/ams-plugin-alarm.css`
-2. In the homepage `<head>`, after the other stylesheets, add:
+2. Save these two photos (they are in the pack under `assets/`):
+   - `assets/remote-f350-dually.jpg` → `/assets/plugin/alarm/remote-f350-dually.jpg`
+   - `assets/dash-cam-wireless.jpg` → `/assets/plugin/alarm/dash-cam-wireless.jpg`
+3. In the homepage `<head>`, after the other stylesheets, add:
    `<link rel="stylesheet" href="/assets/css/ams-plugin-alarm.css">`
-3. Paste `ams-plugin-alarm.html` as specified below.
+4. Paste `ams-plugin-alarm.html` as specified below.
 
 ## HTML insert
 Find this close on the homepage (`sites/lacaralarm/index.html`):
@@ -38,8 +41,8 @@ Paste the full contents of `ams-plugin-alarm.html` **between** those two tags.
 - Change `:root` colors. This desk is steel `--accent: #5A7D94`. Not hub gold. Not Beats red.
 - Invent photos. Use existing:
   - `/assets/img/services-tab/06-alarms-desktop.jpg`
-  - `/assets/img/services-tab/07-remote-start-desktop.jpg`
-  - `/assets/img/inner/dash-camera-desktop.jpg`
+  - `/assets/plugin/alarm/remote-f350-dually.jpg`  (black F-350 dually — do not use the stretched white truck)
+  - `/assets/plugin/alarm/dash-cam-wireless.jpg`  (wireless look, no wires)
   - `/assets/img/services-tab/08-gps-desktop.jpg`
   - `/assets/img/services-tab/09-fleet-desktop.jpg`
 - Invent a Compustar 9910 plate. There is no `plate-compustar-9910.png`. Use the shop photo.
@@ -70,10 +73,10 @@ Plugin CSS hides `.mobile-cta-bar` only while `#ams-plug-alarm` is on the page. 
 - GPS Tracking → `/services/gps-tracking/`
 - Asset Protection → `/services/fleet-asset-protection/`
 
-Photos already on this site:
+Photos:
 - `/assets/img/services-tab/06-alarms-desktop.jpg`
-- `/assets/img/services-tab/07-remote-start-desktop.jpg`
-- `/assets/img/inner/dash-camera-desktop.jpg`
+- `/assets/plugin/alarm/remote-f350-dually.jpg`
+- `/assets/plugin/alarm/dash-cam-wireless.jpg`
 - `/assets/img/services-tab/08-gps-desktop.jpg`
 - `/assets/img/services-tab/09-fleet-desktop.jpg`
 
