@@ -37,10 +37,11 @@ Paste the full contents of `ams-plugin-alarm.html` **between** those two tags.
 - Delete `#offers` / tickets
 - Change `:root` colors. This desk is steel `--accent: #5A7D94`. Not hub gold. Not Beats red.
 - Invent photos. Use existing:
-  - `/assets/offers/cstyle-v6/plates/plate-viper-3108v.png`
-  - `/assets/img/shop-drop-2026-08-20/alarm-compustar.jpg`
-  - `/assets/img/inner/dash-camera-desktop.jpg`
+  - `/assets/img/services-tab/06-alarms-desktop.jpg`
   - `/assets/img/services-tab/07-remote-start-desktop.jpg`
+  - `/assets/img/inner/dash-camera-desktop.jpg`
+  - `/assets/img/services-tab/08-gps-desktop.jpg`
+  - `/assets/img/services-tab/09-fleet-desktop.jpg`
 - Invent a Compustar 9910 plate. There is no `plate-compustar-9910.png`. Use the shop photo.
 - Put dash-cam links to `/services/dash-cameras/` (plural). Use `/services/dash-camera/`
 - Use the word warranty / guaranteed / lifetime / financing
@@ -62,16 +63,27 @@ Plugin CSS hides `.mobile-cta-bar` only while `#ams-plug-alarm` is on the page. 
 - Email: audiomotorsports@gmail.com
 - Copy: **Ask for Nick**
 
-## Door URLs
-- Viper 3108V → `/services/viper-installs/`
-- Compustar 9910 → `/services/compustar-dronemobile/`
-- Dash camera → `/services/dash-camera/`
-- Remote start → `/services/remote-start/`
+## Door URLs (live menu)
+- Alarm → `/services/car-alarms/`
+- Remote Start → `/services/remote-start/`
+- Dash Camera → `/services/dash-camera/`  (singular)
+- GPS Tracking → `/services/gps-tracking/`
+- Asset Protection → `/services/fleet-asset-protection/`
+
+Photos already on this site:
+- `/assets/img/services-tab/06-alarms-desktop.jpg`
+- `/assets/img/services-tab/07-remote-start-desktop.jpg`
+- `/assets/img/inner/dash-camera-desktop.jpg`
+- `/assets/img/services-tab/08-gps-desktop.jpg`
+- `/assets/img/services-tab/09-fleet-desktop.jpg`
+
+Do not invent a Compustar 9910 plate. Do not invent GPS or asset prices.
 
 ## Done when
 - Banner is identical
 - Proof + quote sit directly under the banner
-- Four cards, real photos, $269 and $499 only
+- Five tabs + five cards, real photos
+- $269 and $499 only; GPS and asset protection have no price
 - Offer tickets still exist below
 - Phone screenshot: Text | Call left, chatbot clear bottom-right
 - SMS opens to +1 213-429-1092 with year/make/model if filled

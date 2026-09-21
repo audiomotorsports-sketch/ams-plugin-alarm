@@ -10,4 +10,4 @@ Follow **INSTALL-LA-CAR-ALARM.md**. Branch **v1**. Fetch the three files. Do not
 - https://raw.githubusercontent.com/audiomotorsports-sketch/ams-plugin-alarm/main/ams-plugin-alarm.html
 - https://raw.githubusercontent.com/audiomotorsports-sketch/ams-plugin-alarm/main/ams-plugin-alarm.css
 
-Viper 3108V $269 · Compustar 9910 $499 starting · Ask for Nick.
+Tabs from the live menu: Alarm · Remote Start · Dash Camera · GPS Tracking · Asset Protection. Viper $269 · Compustar $499 starting · Ask for Nick.
