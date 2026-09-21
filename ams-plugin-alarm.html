@@ -1,0 +1,133 @@
+<!--
+  LA Car Alarm quote plugin
+  INSERT after </section> of class="hero-banner"
+  BEFORE <section class="offer-cards"
+  Pair with /assets/css/ams-plugin-alarm.css
+-->
+<div class="ams-plug" id="ams-plug-alarm" data-ams-plugin="alarm-v1">
+  <div class="ams-plug-proof">
+    <div><span>Google</span><strong>4.8 from 654</strong></div>
+    <div><span>Yelp</span><strong>4.7 from 777</strong></div>
+    <div><span>Since</span><strong>2003</strong></div>
+    <div><span>Bay</span><strong>Carson</strong></div>
+    <div><span>Walk-in</span><strong>Mon–Sat 9:30–6</strong></div>
+  </div>
+
+  <section class="ams-plug-quote" id="quote">
+    <div class="container">
+      <span class="eyebrow">Alarm desk · ask for Nick</span>
+      <h2>Text the year, make, and model. <em>Nick quotes the job.</em></h2>
+      <p class="lead">Viper 3108V $269 installed. Compustar 9910 $499 starting, most cars. Work happens in the Carson bay. No mobile.</p>
+
+      <div class="ams-plug-grid">
+        <input name="year" inputmode="numeric" autocomplete="off" placeholder="Year" aria-label="Year">
+        <input name="make" autocomplete="off" placeholder="Make" aria-label="Make">
+        <input name="model" autocomplete="off" placeholder="Model" aria-label="Model">
+      </div>
+
+      <div class="ams-plug-chips" data-chips>
+        <button type="button" data-job="Viper 3108V">Viper 3108V</button>
+        <button type="button" data-job="Compustar 9910">Compustar 9910</button>
+        <button type="button" data-job="Dash cam">Dash cam</button>
+        <button type="button" data-job="Remote start">Remote start</button>
+      </div>
+
+      <div class="ams-plug-actions">
+        <a class="is-text" data-sms href="sms:+12134291092?body=Quote%20request%20from%20LA%20Car%20Alarm.%20Ask%20for%20Nick.">Text us a quote</a>
+        <a class="is-call" href="tel:+13105138800">Call (310) 513-8800</a>
+      </div>
+      <p class="fine">
+        Prefer email?
+        <a href="mailto:audiomotorsports@gmail.com?subject=Quote%20request%20%E2%80%94%20LA%20Car%20Alarm">audiomotorsports@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="ams-plug-jobs">
+    <div class="container">
+      <span class="eyebrow">On this desk</span>
+      <h3>Two locked prices. Two quote doors.</h3>
+      <div class="ams-plug-cards">
+        <a class="ams-plug-card" href="/services/viper-installs/">
+          <img src="/assets/offers/cstyle-v6/plates/plate-viper-3108v.png" width="900" height="700" alt="Viper 3108V $269 installed" loading="lazy">
+          <div class="copy">
+            <h4>Viper 3108V</h4>
+            <p>$269 flat, installed.</p>
+            <span>Alarm</span>
+          </div>
+        </a>
+        <a class="ams-plug-card" href="/services/compustar-dronemobile/">
+          <img src="/assets/img/shop-drop-2026-08-20/alarm-compustar.jpg" width="900" height="700" alt="Compustar remote start" loading="lazy">
+          <div class="copy">
+            <h4>Compustar 9910</h4>
+            <p>$499 starting, most cars.</p>
+            <span>Remote start</span>
+          </div>
+        </a>
+        <a class="ams-plug-card" href="/services/dash-camera/">
+          <img src="/assets/img/inner/dash-camera-desktop.jpg" width="900" height="700" alt="Dash camera install" loading="lazy">
+          <div class="copy">
+            <h4>Dash camera</h4>
+            <p>Quote the car. Thinkware on this desk.</p>
+            <span>Dash cam</span>
+          </div>
+        </a>
+        <a class="ams-plug-card" href="/services/remote-start/">
+          <img src="/assets/img/services-tab/07-remote-start-desktop.jpg" width="900" height="700" alt="Remote start install" loading="lazy">
+          <div class="copy">
+            <h4>Remote start</h4>
+            <p>Ask for Nick. Quote the year.</p>
+            <span>Start</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="ams-plug-sticky" aria-label="Text or call">
+  <a class="is-text" data-sms-sticky href="sms:+12134291092?body=Quote%20request%20from%20LA%20Car%20Alarm.%20Ask%20for%20Nick.">Text us</a>
+  <a class="is-call" href="tel:+13105138800">Call</a>
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById("ams-plug-alarm");
+  if (!root) return;
+  var job = "";
+  function smsHref(body) {
+    var msg = encodeURIComponent(body);
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent)
+      ? "sms:+12134291092&body=" + msg
+      : "sms:+12134291092?body=" + msg;
+  }
+  function body() {
+    var y = ((root.querySelector("[name=year]") || {}).value || "").trim();
+    var mk = ((root.querySelector("[name=make]") || {}).value || "").trim();
+    var md = ((root.querySelector("[name=model]") || {}).value || "").trim();
+    var car = [y, mk, md].filter(Boolean).join(" ");
+    var parts = ["Quote request"];
+    if (car) parts.push(car);
+    if (job) parts.push(job);
+    parts.push("Ask for Nick. From LA Car Alarm.");
+    return parts.join(" — ");
+  }
+  function bind(el) {
+    if (!el) return;
+    el.addEventListener("click", function () {
+      el.href = smsHref(body());
+    });
+  }
+  root.querySelectorAll("[data-job]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var next = btn.getAttribute("data-job");
+      job = job === next ? "" : next;
+      root.querySelectorAll("[data-job]").forEach(function (b) {
+        b.classList.toggle("is-on", b.getAttribute("data-job") === job);
+      });
+    });
+  });
+  bind(root.querySelector("[data-sms]"));
+  bind(document.querySelector("[data-sms-sticky]"));
+})();
+</script>
